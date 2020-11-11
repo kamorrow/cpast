@@ -25,7 +25,6 @@ var lyr_ServiceTerritory_1 = new ol.layer.Vector({
                 style: style_ServiceTerritory_1,
                 interactive: true,
                 title: '<img src="styles/legend/ServiceTerritory_1.png" /> Service Territory'
-				opacity: 0.5
             });
 
 lyr_OpenStreetMap_0.setVisible(true);lyr_ServiceTerritory_1.setVisible(true);
