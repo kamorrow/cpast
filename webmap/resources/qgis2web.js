@@ -27,12 +27,27 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1
+        extent: [-13476558.059726, 3712633.329278, -13037396.792329, 4348537.986640], maxZoom: 28, minZoom: 1
     })
 });
 
+var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
+map.addControl(layerSwitcher);
 
-map.getView().fit([-13513014.137804, 3750592.577010, -12816366.205423, 4250841.291301], map.getSize());
+    var searchLayer = new SearchLayer({
+      layer: lyr_ServiceTerritory_1,
+      colName: 'CITY',
+      zoom: 10,
+      collapsed: true,
+      map: map
+    });
+
+    map.addControl(searchLayer);
+    document.getElementsByClassName('search-layer')[0]
+    .getElementsByTagName('button')[0].className +=
+    ' fa fa-binoculars';
+    
+map.getView().fit([-13476558.059726, 3712633.329278, -13037396.792329, 4348537.986640], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -72,7 +87,7 @@ var featureOverlay = new ol.layer.Vector({
     updateWhileInteracting: true // optional, for instant visual feedback
 });
 
-var doHighlight = false;
+var doHighlight = true;
 var doHover = false;
 
 var highlight;

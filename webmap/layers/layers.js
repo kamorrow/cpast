@@ -29,9 +29,9 @@ var lyr_ServiceTerritory_1 = new ol.layer.Vector({
 
 lyr_OpenStreetMap_0.setVisible(true);lyr_ServiceTerritory_1.setVisible(true);
 var layersList = [lyr_OpenStreetMap_0,lyr_ServiceTerritory_1];
-lyr_ServiceTerritory_1.set('fieldAliases', {'FID': 'FID', 'COUNTY': 'COUNTY', 'CITY': 'CITY', 'COPRI': 'COPRI', 'Shape_Leng': 'Shape_Leng', 'SHAPE_Le_1': 'SHAPE_Le_1', 'SHAPE_Area': 'SHAPE_Area', });
-lyr_ServiceTerritory_1.set('fieldImages', {'FID': 'Range', 'COUNTY': 'TextEdit', 'CITY': 'TextEdit', 'COPRI': 'TextEdit', 'Shape_Leng': 'TextEdit', 'SHAPE_Le_1': 'TextEdit', 'SHAPE_Area': 'TextEdit', });
-lyr_ServiceTerritory_1.set('fieldLabels', {'FID': 'no label', 'COUNTY': 'inline label', 'CITY': 'inline label', 'COPRI': 'no label', 'Shape_Leng': 'no label', 'SHAPE_Le_1': 'no label', 'SHAPE_Area': 'no label', });
+lyr_ServiceTerritory_1.set('fieldAliases', {'FID': 'FID', 'COUNTY': 'County', 'CITY': 'City', 'COPRI': 'COPRI', 'Shape_Leng': 'Shape_Leng', 'SHAPE_Le_1': 'SHAPE_Le_1', 'SHAPE_Area': 'SHAPE_Area', });
+lyr_ServiceTerritory_1.set('fieldImages', {'FID': 'Hidden', 'COUNTY': 'TextEdit', 'CITY': 'TextEdit', 'COPRI': 'Hidden', 'Shape_Leng': 'Hidden', 'SHAPE_Le_1': 'Hidden', 'SHAPE_Area': 'Hidden', });
+lyr_ServiceTerritory_1.set('fieldLabels', {'COUNTY': 'inline label', 'CITY': 'inline label', });
 lyr_ServiceTerritory_1.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
