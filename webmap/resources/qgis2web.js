@@ -27,7 +27,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-        extent: [-13476558.059726, 3712633.329278, -13037396.792329, 4348537.986640], maxZoom: 28, minZoom: 1
+         maxZoom: 28, minZoom: 1
     })
 });
 
@@ -47,7 +47,7 @@ map.addControl(layerSwitcher);
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([-13476558.059726, 3712633.329278, -13037396.792329, 4348537.986640], map.getSize());
+map.getView().fit([-13594248.897512, 3778672.411922, -12921221.870526, 4275355.990299], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
