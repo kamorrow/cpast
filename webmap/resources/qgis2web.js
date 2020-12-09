@@ -35,7 +35,7 @@ var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
     var searchLayer = new SearchLayer({
-      layer: lyr_ServiceTerritory_1,
+      layer: lyr_ServiceTerritory_2,
       colName: 'CITY',
       zoom: 10,
       collapsed: true,
@@ -47,7 +47,7 @@ map.addControl(layerSwitcher);
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([-13594248.897512, 3778672.411922, -12921221.870526, 4275355.990299], map.getSize());
+map.getView().fit([-13308643.404019, 3922760.218180, -13087346.507925, 4221064.549949], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
